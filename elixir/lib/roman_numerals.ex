@@ -16,8 +16,7 @@ defmodule RomanNumerals do
   ]
 
   def convert(arabic) when arabic >= 1 do
-    roman_str = ""
-    execute(arabic, roman_str, @arabic_roman_numerals)
+    execute(arabic, "", @arabic_roman_numerals)
   end
 
   def convert(arabic) when arabic < 1 do
