@@ -9,7 +9,8 @@ defmodule SmallestMultiples do
 
   defp calculate(modulo, number) do
     cond do
-      Enum.all?(Enum.to_list(1..modulo), fn x -> rem(number, x) == 0 end) ->
+      Enum.to_list(1..modulo)
+      |> Enum.all?(fn x -> rem(number, x) == 0 end) ->
         number
       true ->
         calculate(modulo, number + 1)
